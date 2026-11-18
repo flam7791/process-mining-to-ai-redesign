@@ -1,0 +1,24 @@
+name: checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (mining, AI-fit caps, value case, report)
+        run: python -m unittest discover -s tests -v
+      - name: End-to-end run on the sample log
+        run: |
+          PYTHONPATH=src python -m pm2ai analyze data/sample_event_log.csv --out reports/latest
+          grep -q "## 5. Approval required" reports/latest/report.md
+      - name: Example output is reproducible
+        run: diff <(python -c "import json;d=json.load(open('reports/latest/facts.json'));print(json.dumps(d['redesign'],sort_keys=True))") <(python -c "import json;d=json.load(open('reports/example/facts.json'));print(json.dumps(d['redesign'],sort_keys=True))")
+      - name: Memo eval (every number in the example memo comes from facts.json)
+        run: python evals/check_memo.py reports/example/facts.json reports/example/memo.md
+      - name: Skill limits
+        run: python tools/check_limits.py --platform claude-skill agent/redesign-memo
+      - name: Scrub for internal material
+        run: python tools/scrub_check.py .

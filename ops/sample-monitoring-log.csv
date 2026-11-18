@@ -1,0 +1,5 @@
+# SAMPLE DATA - invented to show the log format. Not from any real deployment.
+week,analyses_run,memos_drafted,check_memo_failures,owner_corrections_per_memo,proposals_approved,proposals_stopped,median_minutes_to_memo,notes
+2026-W02,3,3,0,1.3,2,1,6,first pilot week
+2026-W03,4,4,1,0.8,3,1,5,one memo quoted a derived total; added as eval case
+2026-W04,2,2,0,0.5,1,0,5,

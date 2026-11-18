@@ -1,0 +1,637 @@
+{
+ "meta": {
+  "tool": "pm2ai",
+  "version": "0.1.0",
+  "process": "Warranty-claim handling, second quarter (synthetic)",
+  "source": "evals/cases/_log.csv",
+  "unassessed_activities": []
+ },
+ "facts": {
+  "cases": 420,
+  "events": 3643,
+  "period": {
+   "start": "2026-01-05T08:00:47",
+   "end": "2026-04-13T16:16:23"
+  },
+  "cycle_time_h": {
+   "median": 136.4,
+   "p90": 252.3,
+   "mean": 153.8
+  },
+  "variants": {
+   "distinct": 14,
+   "top": [
+    {
+     "path": [
+      "Receive claim",
+      "Register claim",
+      "Check warranty eligibility",
+      "Technical assessment",
+      "Order spare part",
+      "Notify customer",
+      "Close claim"
+     ],
+     "cases": 96,
+     "share": 0.229
+    },
+    {
+     "path": [
+      "Receive claim",
+      "Register claim",
+      "Check warranty eligibility",
+      "Technical assessment",
+      "Approve resolution",
+      "Order spare part",
+      "Notify customer",
+      "Close claim"
+     ],
+     "cases": 75,
+     "share": 0.179
+    },
+    {
+     "path": [
+      "Receive claim",
+      "Register claim",
+      "Check warranty eligibility",
+      "Technical assessment",
+      "Ship replacement",
+      "Notify customer",
+      "Close claim"
+     ],
+     "cases": 60,
+     "share": 0.143
+    },
+    {
+     "path": [
+      "Receive claim",
+      "Register claim",
+      "Check warranty eligibility",
+      "Technical assessment",
+      "Approve resolution",
+      "Ship replacement",
+      "Notify customer",
+      "Close claim"
+     ],
+     "cases": 50,
+     "share": 0.119
+    },
+    {
+     "path": [
+      "Receive claim",
+      "Register claim",
+      "Check warranty eligibility",
+      "Request missing information",
+      "Receive missing information",
+      "Check warranty eligibility",
+      "Technical assessment",
+      "Order spare part",
+      "Notify customer",
+      "Close claim"
+     ],
+     "cases": 37,
+     "share": 0.088
+    }
+   ]
+  },
+  "rework": {
+   "cases_with_rework": 139,
+   "rate": 0.331,
+   "repeated_activities": [
+    "Check warranty eligibility",
+    "Receive missing information",
+    "Request missing information"
+   ]
+  },
+  "handoffs_per_case": {
+   "median": 5.0,
+   "max": 11
+  },
+  "activities": [
+   {
+    "activity": "Technical assessment",
+    "events": 420,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 37.0,
+    "p90_wait_h": 84.9,
+    "total_wait_h": 19496.2,
+    "wait_share": 0.302,
+    "rework_cases": 0,
+    "bottleneck_rank": 1
+   },
+   {
+    "activity": "Close claim",
+    "events": 420,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 19.7,
+    "p90_wait_h": 42.2,
+    "total_wait_h": 10001.4,
+    "wait_share": 0.155,
+    "rework_cases": 0,
+    "bottleneck_rank": 2
+   },
+   {
+    "activity": "Receive missing information",
+    "events": 168,
+    "cases": 139,
+    "case_share": 0.331,
+    "median_wait_h": 51.2,
+    "p90_wait_h": 101.9,
+    "total_wait_h": 9978.3,
+    "wait_share": 0.154,
+    "rework_cases": 26,
+    "bottleneck_rank": 3
+   },
+   {
+    "activity": "Check warranty eligibility",
+    "events": 588,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 10.2,
+    "p90_wait_h": 22.8,
+    "total_wait_h": 7388.4,
+    "wait_share": 0.114,
+    "rework_cases": 139,
+    "bottleneck_rank": 4
+   },
+   {
+    "activity": "Approve resolution",
+    "events": 199,
+    "cases": 199,
+    "case_share": 0.474,
+    "median_wait_h": 31.7,
+    "p90_wait_h": 56.6,
+    "total_wait_h": 6978.3,
+    "wait_share": 0.108,
+    "rework_cases": 0,
+    "bottleneck_rank": 5
+   },
+   {
+    "activity": "Register claim",
+    "events": 420,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 6.3,
+    "p90_wait_h": 12.6,
+    "total_wait_h": 3015.2,
+    "wait_share": 0.047,
+    "rework_cases": 0,
+    "bottleneck_rank": 6
+   },
+   {
+    "activity": "Notify customer",
+    "events": 420,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 4.8,
+    "p90_wait_h": 9.7,
+    "total_wait_h": 2389.4,
+    "wait_share": 0.037,
+    "rework_cases": 0,
+    "bottleneck_rank": 7
+   },
+   {
+    "activity": "Ship replacement",
+    "events": 167,
+    "cases": 167,
+    "case_share": 0.398,
+    "median_wait_h": 12.0,
+    "p90_wait_h": 27.1,
+    "total_wait_h": 2371.8,
+    "wait_share": 0.037,
+    "rework_cases": 0,
+    "bottleneck_rank": 8
+   },
+   {
+    "activity": "Order spare part",
+    "events": 253,
+    "cases": 253,
+    "case_share": 0.602,
+    "median_wait_h": 8.1,
+    "p90_wait_h": 14.5,
+    "total_wait_h": 2247.6,
+    "wait_share": 0.035,
+    "rework_cases": 0,
+    "bottleneck_rank": 9
+   },
+   {
+    "activity": "Request missing information",
+    "events": 168,
+    "cases": 139,
+    "case_share": 0.331,
+    "median_wait_h": 3.7,
+    "p90_wait_h": 7.7,
+    "total_wait_h": 737.3,
+    "wait_share": 0.011,
+    "rework_cases": 26,
+    "bottleneck_rank": 10
+   },
+   {
+    "activity": "Receive claim",
+    "events": 420,
+    "cases": 420,
+    "case_share": 1.0,
+    "median_wait_h": 0.0,
+    "p90_wait_h": 0.0,
+    "total_wait_h": 0,
+    "wait_share": 0.0,
+    "rework_cases": 0,
+    "bottleneck_rank": 11
+   }
+  ],
+  "dfg": [
+   {
+    "from": "Receive claim",
+    "to": "Register claim",
+    "count": 420,
+    "median_gap_h": 6.3
+   },
+   {
+    "from": "Register claim",
+    "to": "Check warranty eligibility",
+    "count": 420,
+    "median_gap_h": 10.7
+   },
+   {
+    "from": "Check warranty eligibility",
+    "to": "Technical assessment",
+    "count": 420,
+    "median_gap_h": 37.0
+   },
+   {
+    "from": "Notify customer",
+    "to": "Close claim",
+    "count": 420,
+    "median_gap_h": 19.7
+   },
+   {
+    "from": "Order spare part",
+    "to": "Notify customer",
+    "count": 253,
+    "median_gap_h": 4.9
+   },
+   {
+    "from": "Technical assessment",
+    "to": "Approve resolution",
+    "count": 199,
+    "median_gap_h": 31.7
+   },
+   {
+    "from": "Check warranty eligibility",
+    "to": "Request missing information",
+    "count": 168,
+    "median_gap_h": 3.7
+   },
+   {
+    "from": "Request missing information",
+    "to": "Receive missing information",
+    "count": 168,
+    "median_gap_h": 51.2
+   },
+   {
+    "from": "Receive missing information",
+    "to": "Check warranty eligibility",
+    "count": 168,
+    "median_gap_h": 9.6
+   },
+   {
+    "from": "Ship replacement",
+    "to": "Notify customer",
+    "count": 167,
+    "median_gap_h": 4.7
+   },
+   {
+    "from": "Technical assessment",
+    "to": "Order spare part",
+    "count": 141,
+    "median_gap_h": 7.6
+   },
+   {
+    "from": "Approve resolution",
+    "to": "Order spare part",
+    "count": 112,
+    "median_gap_h": 8.6
+   },
+   {
+    "from": "Approve resolution",
+    "to": "Ship replacement",
+    "count": 87,
+    "median_gap_h": 11.4
+   },
+   {
+    "from": "Technical assessment",
+    "to": "Ship replacement",
+    "count": 80,
+    "median_gap_h": 12.4
+   }
+  ]
+ },
+ "ai_fit": [
+  {
+   "activity": "Technical assessment",
+   "fit": 0.7,
+   "level": "L2",
+   "reasons": [
+    "task type: document_review",
+    "medium risk: a person approves each output"
+   ],
+   "guardrails": [
+    "A named person approves every output before it leaves the team.",
+    "The agent cites the record fields it used; missing fields are listed, not guessed."
+   ],
+   "handling_minutes": 25
+  },
+  {
+   "activity": "Close claim",
+   "fit": 0.9,
+   "level": "L3",
+   "reasons": [
+    "task type: data_entry"
+   ],
+   "guardrails": [
+    "A weekly sample of agent actions is reviewed against the acceptance criteria.",
+    "Exceptions (low confidence, missing data, policy edge cases) are routed to a person.",
+    "Kill switch: the step falls back to the manual procedure if error rate exceeds the agreed threshold."
+   ],
+   "handling_minutes": 3
+  },
+  {
+   "activity": "Receive missing information",
+   "fit": 0.0,
+   "level": "L0",
+   "reasons": [
+    "task type: external",
+    "no AI role for this kind of step"
+   ],
+   "guardrails": [],
+   "handling_minutes": 0
+  },
+  {
+   "activity": "Check warranty eligibility",
+   "fit": 0.7,
+   "level": "L2",
+   "reasons": [
+    "task type: rules_check",
+    "medium risk: a person approves each output"
+   ],
+   "guardrails": [
+    "A named person approves every output before it leaves the team.",
+    "The agent cites the record fields it used; missing fields are listed, not guessed."
+   ],
+   "handling_minutes": 10
+  },
+  {
+   "activity": "Approve resolution",
+   "fit": 0.2,
+   "level": "L1",
+   "reasons": [
+    "task type: judgement_decision",
+    "high risk or financial authority: never autonomous",
+    "decision stays with a person; the agent prepares the evidence only"
+   ],
+   "guardrails": [
+    "Suggestions are shown with their source data; the person decides."
+   ],
+   "handling_minutes": 7
+  },
+  {
+   "activity": "Register claim",
+   "fit": 0.9,
+   "level": "L3",
+   "reasons": [
+    "task type: data_entry"
+   ],
+   "guardrails": [
+    "A weekly sample of agent actions is reviewed against the acceptance criteria.",
+    "Exceptions (low confidence, missing data, policy edge cases) are routed to a person.",
+    "Kill switch: the step falls back to the manual procedure if error rate exceeds the agreed threshold."
+   ],
+   "handling_minutes": 8
+  },
+  {
+   "activity": "Notify customer",
+   "fit": 0.75,
+   "level": "L2",
+   "reasons": [
+    "task type: communication"
+   ],
+   "guardrails": [
+    "A named person approves every output before it leaves the team.",
+    "The agent cites the record fields it used; missing fields are listed, not guessed."
+   ],
+   "handling_minutes": 5
+  },
+  {
+   "activity": "Ship replacement",
+   "fit": 0.0,
+   "level": "L0",
+   "reasons": [
+    "task type: physical",
+    "no AI role for this kind of step"
+   ],
+   "guardrails": [],
+   "handling_minutes": 10
+  },
+  {
+   "activity": "Order spare part",
+   "fit": 0.6,
+   "level": "L2",
+   "reasons": [
+    "task type: data_entry",
+    "medium risk: a person approves each output",
+    "high risk or financial authority: never autonomous"
+   ],
+   "guardrails": [
+    "A named person approves every output before it leaves the team.",
+    "The agent cites the record fields it used; missing fields are listed, not guessed."
+   ],
+   "handling_minutes": 5
+  },
+  {
+   "activity": "Request missing information",
+   "fit": 0.75,
+   "level": "L2",
+   "reasons": [
+    "task type: communication"
+   ],
+   "guardrails": [
+    "A named person approves every output before it leaves the team.",
+    "The agent cites the record fields it used; missing fields are listed, not guessed."
+   ],
+   "handling_minutes": 6
+  },
+  {
+   "activity": "Receive claim",
+   "fit": 0.0,
+   "level": "L0",
+   "reasons": [
+    "task type: system",
+    "no AI role for this kind of step"
+   ],
+   "guardrails": [],
+   "handling_minutes": 0
+  }
+ ],
+ "redesign": {
+  "proposals": [
+   {
+    "id": "P1",
+    "kind": "remove rework",
+    "target": "Register claim",
+    "change": "An agent checks each claim for completeness at 'Register claim' and drafts the request for missing information at once, before the eligibility check, so the loop through Check warranty eligibility, Receive missing information, Request missing information is avoided.",
+    "level": "L3",
+    "measured": {
+     "cases_with_rework": 139,
+     "rework_rate": 0.331,
+     "avg_loop_effort_min": 19.3
+    },
+    "estimate": {
+     "cases_avoided": 70,
+     "value_eur_per_year": 3768,
+     "median_loop_hours_removed_per_avoided_case": 73.9
+    },
+    "assumptions_used": [
+     "rework_avoided_by_intake_check",
+     "handling_minutes (catalog)",
+     "cost_per_staff_hour_eur",
+     "annualisation_factor"
+    ],
+    "recommendation": "pilot (cycle-time driver)"
+   },
+   {
+    "id": "P2",
+    "kind": "agent support",
+    "target": "Technical assessment",
+    "change": "An agent drafts the output from the case record; a person approves each one.",
+    "level": "L2",
+    "measured": {
+     "total_wait_h": 19496.2,
+     "median_wait_h": 37.0,
+     "wait_share": 0.302,
+     "events": 420
+    },
+    "estimate": {
+     "wait_reduction": 0.4,
+     "effort_hours_saved_per_year": 325,
+     "value_eur_per_year": 14614
+    },
+    "assumptions_used": [
+     "wait_reduction_by_level",
+     "effort_reduction_by_level",
+     "handling_minutes (catalog)",
+     "cost_per_staff_hour_eur",
+     "annualisation_factor"
+    ],
+    "recommendation": "pilot (cycle-time driver)"
+   },
+   {
+    "id": "P3",
+    "kind": "agent support",
+    "target": "Close claim",
+    "change": "An agent completes the step and reports; people review a weekly sample and all exceptions.",
+    "level": "L3",
+    "measured": {
+     "total_wait_h": 10001.4,
+     "median_wait_h": 19.7,
+     "wait_share": 0.155,
+     "events": 420
+    },
+    "estimate": {
+     "wait_reduction": 0.7,
+     "effort_hours_saved_per_year": 62,
+     "value_eur_per_year": 2806
+    },
+    "assumptions_used": [
+     "wait_reduction_by_level",
+     "effort_reduction_by_level",
+     "handling_minutes (catalog)",
+     "cost_per_staff_hour_eur",
+     "annualisation_factor"
+    ],
+    "recommendation": "iterate (value below threshold)"
+   },
+   {
+    "id": "P4",
+    "kind": "agent support",
+    "target": "Check warranty eligibility",
+    "change": "An agent drafts the output from the case record; a person approves each one.",
+    "level": "L2",
+    "measured": {
+     "total_wait_h": 7388.4,
+     "median_wait_h": 10.2,
+     "wait_share": 0.114,
+     "events": 588
+    },
+    "estimate": {
+     "wait_reduction": 0.4,
+     "effort_hours_saved_per_year": 182,
+     "value_eur_per_year": 8184
+    },
+    "assumptions_used": [
+     "wait_reduction_by_level",
+     "effort_reduction_by_level",
+     "handling_minutes (catalog)",
+     "cost_per_staff_hour_eur",
+     "annualisation_factor"
+    ],
+    "recommendation": "iterate (value below threshold)"
+   },
+   {
+    "id": "P5",
+    "kind": "agent support",
+    "target": "Approve resolution",
+    "change": "An agent prepares the evidence and a suggested answer; the person decides.",
+    "level": "L1",
+    "measured": {
+     "total_wait_h": 6978.3,
+     "median_wait_h": 31.7,
+     "wait_share": 0.108,
+     "events": 199
+    },
+    "estimate": {
+     "wait_reduction": 0.15,
+     "effort_hours_saved_per_year": 17,
+     "value_eur_per_year": 776
+    },
+    "assumptions_used": [
+     "wait_reduction_by_level",
+     "effort_reduction_by_level",
+     "handling_minutes (catalog)",
+     "cost_per_staff_hour_eur",
+     "annualisation_factor"
+    ],
+    "recommendation": "assist only"
+   }
+  ],
+  "cycle_time_estimate_h": {
+   "median_before": 136.4,
+   "median_after": 80.4,
+   "note": "recomputed per case from the assumptions below; not a measurement"
+  },
+  "total_value_eur_per_year": 30148,
+  "assumptions": {
+   "wait_reduction_by_level": {
+    "L0": 0.0,
+    "L1": 0.15,
+    "L2": 0.4,
+    "L3": 0.7
+   },
+   "effort_reduction_by_level": {
+    "L0": 0.0,
+    "L1": 0.2,
+    "L2": 0.5,
+    "L3": 0.8
+   },
+   "rework_avoided_by_intake_check": 0.5,
+   "cost_per_staff_hour_eur": 45,
+   "annualisation_factor": "365 / days covered by the log",
+   "scale_threshold_eur_per_year": 15000,
+   "max_proposals": 5
+  },
+  "approval": {
+   "status": "awaiting process-owner review",
+   "rule": "No proposal is implemented until a named process owner approves it."
+  }
+ }
+}

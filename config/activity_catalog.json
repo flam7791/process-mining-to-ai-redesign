@@ -1,0 +1,16 @@
+{
+  "_about": "Describes each activity for the AI-fit assessment. Filled in with the process owner; values here are invented for the Northwind Appliances sample. handling_minutes = hands-on effort per occurrence (assumption, not mined: the log only has completion timestamps).",
+  "activities": {
+    "Receive claim":               {"task_type": "system",            "data_available": true,  "risk": "low",    "financial_authority": false, "handling_minutes": 0},
+    "Register claim":              {"task_type": "data_entry",        "data_available": true,  "risk": "low",    "financial_authority": false, "handling_minutes": 8},
+    "Check warranty eligibility":  {"task_type": "rules_check",       "data_available": true,  "risk": "medium", "financial_authority": false, "handling_minutes": 10},
+    "Request missing information": {"task_type": "communication",     "data_available": true,  "risk": "low",    "financial_authority": false, "handling_minutes": 6},
+    "Receive missing information": {"task_type": "external",          "data_available": false, "risk": "low",    "financial_authority": false, "handling_minutes": 0},
+    "Technical assessment":        {"task_type": "document_review",   "data_available": true,  "risk": "medium", "financial_authority": false, "handling_minutes": 25},
+    "Approve resolution":          {"task_type": "judgement_decision","data_available": true,  "risk": "high",   "financial_authority": true,  "handling_minutes": 7},
+    "Order spare part":            {"task_type": "data_entry",        "data_available": true,  "risk": "medium", "financial_authority": true,  "handling_minutes": 5},
+    "Ship replacement":            {"task_type": "physical",          "data_available": true,  "risk": "medium", "financial_authority": true,  "handling_minutes": 10},
+    "Notify customer":             {"task_type": "communication",     "data_available": true,  "risk": "low",    "financial_authority": false, "handling_minutes": 5},
+    "Close claim":                 {"task_type": "data_entry",        "data_available": true,  "risk": "low",    "financial_authority": false, "handling_minutes": 3}
+  }
+}

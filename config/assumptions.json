@@ -1,0 +1,10 @@
+{
+  "_about": "Every estimate in the redesign uses these values and the report prints them. They are planning assumptions to be challenged by the process owner, not measurements.",
+  "wait_reduction_by_level": {"L0": 0.0, "L1": 0.15, "L2": 0.40, "L3": 0.70},
+  "effort_reduction_by_level": {"L0": 0.0, "L1": 0.20, "L2": 0.50, "L3": 0.80},
+  "rework_avoided_by_intake_check": 0.50,
+  "cost_per_staff_hour_eur": 45,
+  "annualisation_factor": "365 / days covered by the log",
+  "scale_threshold_eur_per_year": 15000,
+  "max_proposals": 5
+}
